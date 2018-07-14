@@ -128,6 +128,12 @@ bindsym $mod+t border normal    0
 bindsym $mod+y border pixel     1
 bindsym $mod+u border none
 
+# move workspace to display 
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
+bindsym $mod+Ctrl+Up move workspace to output Up
+bindsym $mod+Ctrl+Down move workspace to output Down
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -162,7 +168,7 @@ bindsym $mod+F6 workspace $ws6; exec audacious
 bindsym $mod+F7 workspace $ws7; exec gcolor2
 bindsym $mod+F8 workspace $ws8; exec telegram
 bindsym $mod+F9 workspace $ws9; exec go-for-it
-bindsym Print                   exec --no-startup-id gnome-screenshot
+bindsym Print                   exec --no-startup-id spectacle
 bindsym $mod+Shift+x            exec --no-startup-id i3lock-fancy -f Source-Sans-Pro
 
 # volume
@@ -220,14 +226,17 @@ for_window [class="Software-properties-gtk"]        floating enable
 # assign program to workspace
 assign [class="Alacritty"]          → $ws1
 assign [class="terminal"]           → $ws1
+assign [class="rxvt-unicode"]           → $ws1
+assign [class="rxvt"]           → $ws1
 assign [class="Konsole"] 	        → $ws1
 assign [class="Sublime"]            → $ws2
-assign [class="^.*jetbrains-pycharm.*$"] → $ws2
+assign [class="idea"]               → $ws2
 assign [class="Chromium"]           → $ws3
 assign [class="Vivaldi"]            → $ws3
 assign [class="Firefox"]            → $ws3
 assign [class="Authy"]              → $ws3
 assign [class="Nautilus"]           → $ws4
+assign [class="Dolphin"]            → $ws4
 assign [class="Evince"]             → $ws5
 assign [class="ghostwriter"]        → $ws5
 assign [class="libreoffice"]        → $ws5
@@ -236,6 +245,7 @@ assign [class="vlc"]                → $ws6
 assign [class="Gimp"]               → $ws7
 assign [class="Inkscape"]           → $ws7
 assign [class="Hexchat"]            → $ws8
+assign [class="Discord"]            → $ws8
 assign [class="Telegram"]           → $ws8
 assign [class="Upwork"]             → $ws8
 assign [class="Galculator"]         → $ws9
