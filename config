@@ -310,6 +310,6 @@ gaps outer 2
 exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro"
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec-allways --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec --no-startup-id compton --config ~/.config/compton.conf
 
