@@ -46,7 +46,7 @@ hide_edge_borders none
 popup_during_fullscreen smart
 
 # start a terminal
-bindsym $mod+Return workspace $ws1; exec --no-startup-id alacritty
+bindsym $mod+Return workspace $ws1; exec --no-startup-id rxvt-unicode
 
 # start a program launcher
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Source Sans Pro-10' -nb '#212121' -sb '#2B83A6' -sf '#FFFFFF'"
@@ -227,7 +227,7 @@ for_window [class="Software-properties-gtk"]        floating enable
 assign [class="Alacritty"]          → $ws1
 assign [class="terminal"]           → $ws1
 assign [class="rxvt-unicode"]           → $ws1
-assign [class="rxvt"]           → $ws1
+assign [class="Rxvt"]           → $ws1
 assign [class="Konsole"] 	        → $ws1
 assign [class="Sublime"]            → $ws2
 assign [class="idea"]               → $ws2
@@ -310,6 +310,6 @@ gaps outer 2
 exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -f Source-Sans-Pro"
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec-allways --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 exec --no-startup-id compton --config ~/.config/compton.conf
 
